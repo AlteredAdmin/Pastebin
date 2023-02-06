@@ -1,8 +1,8 @@
-# Pastebin
+# Pastebin Scaper 
 
  Python script that scrapes pastebin.com for newly posted paste.
 
-# Pastebin Scaper 
+## Description:
 
 The script is a web scraper that retrieves information from "https://scrape.pastebin.com/api_scraping.php" and saves it in a folder named "scrapes" 
 under the user's home directory. The script first creates the folder (and parent directories if not exist) using the "pathlib" library. 
@@ -18,7 +18,7 @@ every time and waiting for a random time after each iteration.
 
 1. Pastbin pro account. (https://pastebin.com/pro)
 
-## Continuous running
+## Continuous running:
 
 1. Open a terminal window.
 
