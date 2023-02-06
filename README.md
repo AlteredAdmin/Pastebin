@@ -38,14 +38,14 @@ sudo nano /etc/systemd/system/myscript.service
 
 ```
 [Unit]
-Description=My long running script
+Description=Pastebin Scraper
 After=network.target
 StartLimitIntervalSec=0[Service]
 Type=simple
-User=pi
+User=Alteredadmin
 Restart=always
 RestartSec=1
-ExecStart=python3 /home/pi/my_script.py
+ExecStart=python3 /home/Alteredadmin/my_script.py
 
 [Install]
 WantedBy=multi-user.target
