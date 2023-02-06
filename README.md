@@ -17,6 +17,7 @@ every time and waiting for a random time after each iteration.
 ## Requirements:
 
 1. Pastbin pro account. (https://pastebin.com/pro)
+2. Whitelist your IP on pastebin.com
 
 ## Continuous running:
 
