@@ -105,7 +105,7 @@ def scrape():
             print(key)
             print()
             with open(file_path, 'w') as f:
-                f.write("Created by the scraper.\n")
+                f.write("More info: https://github.com/AlteredAdmin/PastebinCreated\n")
                 f.write("\n")
                 f.write(json.dumps(meta_data, indent=2))
                 f.write("\n\n")
