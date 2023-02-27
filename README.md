@@ -78,7 +78,15 @@ sudo systemctl enable myscript
 sudo systemctl status myscript
 
 ```
-9. Type the following command to stop the service:
+
+9. Type the following command to see output of the service
+
+```
+sudo journalctl -u myscript -f
+
+```
+
+10. Type the following command to stop the service:
 
 ```
 sudo systemctl stop myscript
