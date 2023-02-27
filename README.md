@@ -42,6 +42,7 @@ sudo nano /etc/systemd/system/myscript.service
 Description=Pastebin Scraper
 After=network.target
 StartLimitIntervalSec=0
+
 [Service]
 Type=simple
 User=Alteredadmin
