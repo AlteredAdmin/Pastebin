@@ -26,13 +26,13 @@ every time and waiting for a random time after each iteration.
 2. Type the following command to create a service file:
 
 ```
-sudo touch /etc/systemd/system/myscript.service
+sudo touch /etc/systemd/system/paste.service
 ```
 
 3. Type the following command to open the service file in nano text editor:
 
 ```
-sudo nano /etc/systemd/system/myscript.service
+sudo nano /etc/systemd/system/paste.service
 ```
 
 4. In nano text editor, copy and paste the following code:
@@ -48,7 +48,7 @@ Type=simple
 User=Alteredadmin
 Restart=always
 RestartSec=1
-ExecStart=python3 /home/Alteredadmin/my_script.py
+ExecStart=python3 /home/Alteredadmin/paste.py
 
 [Install]
 WantedBy=multi-user.target
@@ -61,33 +61,33 @@ WantedBy=multi-user.target
 
 
 ```
-sudo systemctl start myscript
+sudo systemctl start paste
 ```
 
 7. Type the following command to enable the service to start automatically after a reboot:
 
 
 ```
-sudo systemctl enable myscript
+sudo systemctl enable paste
 
 ```
 
 8. Type the following command to check the status of the service:
 
 ```
-sudo systemctl status myscript
+sudo systemctl status paste
 
 ```
 
 9. Type the following command to see output of the service
 
 ```
-sudo journalctl -u myscript -f
+sudo journalctl -u paste -f
 
 ```
 
 10. Type the following command to stop the service:
 
 ```
-sudo systemctl stop myscript
+sudo systemctl stop paste
 ```
