@@ -1,4 +1,4 @@
-title = '''
+'''
 
 ####################################################################
 
@@ -52,9 +52,6 @@ NOTES
 
 '''
 
-print()
-print (title)
-print()
 
 from pathlib import Path
 from datetime import datetime
