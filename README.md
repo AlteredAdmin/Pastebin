@@ -2,6 +2,16 @@
 
  Python script that scrapes pastebin.com for newly posted paste.
 
+## Overview
+This script provides an automated tool to scrape data from Pastebin using its scraping API. It fetches the latest pastes and their associated metadata and saves them in individual files. Each file is saved in a folder named by the current date, under a parent directory pastebin/scrapes in the user's home directory.
+
+## Features
+- Utilizes Pastebin's scraping API to fetch latest pastes.
+- Saves each paste in a dedicated `.txt` file with metadata and actual content.
+- Adds a delay between each scrape using a `randomsleep` function to mimic human-like behavior.
+- Automatically creates directories for saving pastes based on current date.
+- Handles potential decoding exceptions gracefully.
+
 ## Description:
 
 The script is a web scraper that retrieves information from "https://scrape.pastebin.com/api_scraping.php" and saves it in a folder named "scrapes" 
@@ -18,6 +28,15 @@ every time and waiting for a random time after each iteration.
 
 1. Pastbin pro account. (https://pastebin.com/pro)
 2. Whitelist your IP on pastebin.com
+3. Python 3
+- Python libraries:
+  - `pathlib`
+  - `datetime`
+  - `requests`
+  - `json`
+  - `time`
+  - `sys`
+  - `os`
 
 ## Continuous running:
 
@@ -91,3 +110,19 @@ sudo journalctl -u paste -f
 ```
 sudo systemctl stop paste
 ```
+
+## Notes
+
+- The script continuously runs, fetching new data from Pastebin at random intervals between 120 and 160 seconds. This mimics human-like behavior and is meant to reduce the risk of being detected or banned by Pastebin.
+- Scraped data will be saved in the user's home directory under `pastebin/scrapes/`.
+- If the script encounters an already scraped paste, it will move on to the next paste.
+- In the case of any decoding exceptions during writing the file, the script will gracefully handle the exception and continue.
+
+
+## Reference
+For more details about the Pastebin scraping API, visit [this link](https://pastebin.com/doc_api).
+
+
+## Support the Developer
+If you found this helpful, please consider:
+- **Buymeacoffee:** [Link](http://buymeacoffee.com/alteredadmin)
